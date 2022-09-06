@@ -1,0 +1,42 @@
+3&user_parameters
+   params%filename_p = '/mnt/raid-cita/amarchal/RM-synthesis/data/p_rohsa_Burnslab_meanfield_noise_beam.fits'                  
+   ,params%filename_noise = '/mnt/raid-cita/amarchal/RM-synthesis/data/p_rohsa_Burnslab_meanfield_noise_beam_rms.fits'          
+   ,params%filename_coeff = '../data/coeff_new.dat'          
+   ,params%filename_init = '../data/init_pars_p_rohsa_Burnslab_meanfield_noise_beam.dat'          
+
+   ,params%fileout = '!/mnt/raid-cita/amarchal/RM-synthesis/ROHSA/p_rohsa_Burnslab_meanfield_noise_beam_run_0.fits'           
+   ,params%timeout = 'timestep.dat'             
+
+   ,params%n = 3
+   ,params%n_rmsf = 11
+
+   ,params%amp_init = 0.d0     
+   ,params%mu_init = 0.d0 
+
+   ,params%lambda_amp = 1.d0       
+   ,params%lambda_mu = 1000.d0	
+
+   ,params%lb_amp = 0.d0      
+   ,params%ub_amp = 300.d0         					
+   ,params%lb_mu = -150.d0         						
+   ,params%ub_mu = 150.d0        
+			
+   ,params%freq_min = 115  !! MHz
+   ,params%freq_max = 150  !! MHz
+   ,params%freq_step = 0.183 !! MHz
+
+   ,params%crpix3 = -149
+   ,params%crval3 = -50
+   ,params%cdelt3 = 0.25
+   ,params%rm_n = 150
+
+   ,params%maxiter_init = 15000         !! max iteration for L-BFGS-B alogorithm (init mean spectrum)
+   ,params%maxiter = 400                !! max iteration for L-BFGS-B alogorithm
+   ,params%m = 10                       !! number of corrections used in the limited memory matrix by LBFGS-B
+   ,params%lstd = 1                	!! lower bound to compute the standard deviation map of the cube (if noise .eq. false)
+   ,params%ustd = 10                    !! upper bound to compute the standrad deviation map of the cube (if noise .eq. false)
+   ,params%noise = .false.
+   ,params%iprint = -1                  !! print option 
+   ,params%iprint_init = -1             !! print option init
+   ,params%save_grid = .false.     	!! if true --> save fitted parameters at each iteration of the multiresolution process
+   /
